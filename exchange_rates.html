@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Tables">
+    <title>Tables</title>
+    <link rel="stylesheet" href="hw1.css">
+
+    <script src="hw2.js" async></script>
+</head>
+
+<body onload="popRates()">
+<header>
+<h2>Homework 2 - Basic Operations<br>Extra Credit</h2>
+<strong>Using getElementById and innerHTML to take an U.S. 
+    dollars amount input and display the currency conversion 
+    results on the 3rd colomn of the same table.</strong>
+</header>
+
+
+<section>
+<br><br><br>
+    <form name="FXform" onsubmit="FXconversion(); return false;">
+    <table id="FXtable">
+        <caption style="display: none;">Exchange Rates</caption>
+        <thead>
+        <tr>
+            <th scope="col">Currency</th>
+            <th scope="col">Rate</th>
+            <th scope="col">Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Euro</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Canadian Dollar</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Hong Kong Dollar</td>
+            <td></td>
+            <td id="hk"></td>
+        </tr>
+        <tr>
+            <td>Japanese Yen</td>
+            <td></td>
+            <td id="yen"></td>
+        </tr>
+        <tr>
+            <td>Mexican Peso</td>
+            <td></td>
+            <td id="peso"></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2"><strong>Enter Amount of U.S. Dollars</strong></td>
+            <td><input type="text" id="USdollars" pattern="[0-9]*[.]?[0-9]+" title="Number only" required></td>
+        </tr>
+        </tfoot>
+        </table>
+
+        <br>
+        <input type="submit" value="CURRENCY CONVERSION">
+        <input type="reset" value="RESET" onclick="location.reload()">
+
+        </form>
+</section>
+
+<footer>
+<nav>
+    <br><br><br><a href="hw2.html">Back to Homework 2 main page</a>
+</nav>
+</footer>
+
+</body>
+</html>

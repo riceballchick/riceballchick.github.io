@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Using getElementById and innerHTML">
+    <title>Using getElementById and innerHTML</title>
+    <link rel="stylesheet" href="hw1.css">
+
+    <script src="hw2.js" async></script>
+</head>
+
+<body>
+<header>
+<h2>Homework 2 - Basic Operations Part 2</h2>
+<strong>Using getElementById and innerHTML to take three integers 
+    from form inputs and display the calcuation results 
+    (min, ave, product, min, max) below the form in a div area.</strong>
+</header>
+
+
+<section>
+<br><br><br>
+<form name="numForm" onsubmit="process(); return false">
+<table>
+    <tr>
+    <td><label for="num1">First number:</label></td>
+    <td><input type="text" id="num1" placeholder="Enter an integer" 
+        pattern="[0-9]*" title="Integer only" required></td>
+    </tr>
+    <tr>
+    <td><label for="num2">Second number:</label></td>
+    <td><input type="text" id="num2" placeholder="Enter an integer" 
+        pattern="[0-9]*" title="Integer only" required></td>
+    </tr>
+    <tr>
+    <td><label for="num3">Third number:</label></td>
+    <td><input type="text" id="num3" placeholder="Enter an integer" 
+        pattern="[0-9]*" title="Integer only" required></td>
+    </tr>
+</table>
+<!--
+<br><label for="result">Results</label>:
+<br><textarea rows="6" cols="40" id="result" readonly>
+</textarea>
+-->
+<br>
+<input type="submit" value="SUBMIT">
+<input type="reset" value="RESET" onclick="location.reload()">
+
+</form>
+
+<br>
+<p><u>Results below (after form submission):</u></p>
+<div id="result"></div>
+</section>
+
+<footer>
+<nav>
+    <br><br><br><a href="hw2.html">Back to Homework 2 main page</a>
+</nav>
+</footer>
+
+</body>
+</html>
