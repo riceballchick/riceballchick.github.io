@@ -5,6 +5,11 @@ body {
     margin: auto;
 }
 
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
 table, th, td {
     width: 100%;
     border: 1px solid;
@@ -30,7 +35,7 @@ textarea {
     padding: 10px 16px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 18px;
     margin: 4px 4px;
     transition-duration: 0.4s;
