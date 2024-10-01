@@ -87,7 +87,7 @@ function calcGrades() {
     if (isNaN(hw) || isNaN(midterm) || isNaN(final) || isNaN(parti) || 
         hw == "" || midterm == "" || final == "" || parti == "") {
 
-        resultMsg = "INVALID input! Please enter integers between 0 and 100!";
+        resultMsg = '<br><strong style="color:red;">INVALID input! Please enter integers between 0 and 100!</strong>';
 
     } else {
 
@@ -99,7 +99,7 @@ function calcGrades() {
         if ((hwP < 0 || hwP > 100) || (midtermP < 0 || midtermP > 100) ||
          (finalP < 0 || finalP > 100) || (partiP < 0 || partiP > 100)) {
         
-            resultMsg = "INVALID score! Please enter integers between 0 and 100!";
+            resultMsg = '<br><strong style="color:red;">INVALID score! Please enter integers between 0 and 100!</strong>';
 
          } else {
 
