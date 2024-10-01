@@ -17,13 +17,17 @@ nav {
 /* table, th, td { */
 table {
     width: 100%;
-    border: .5px solid;
-    /* border-collapse: collapse; */
+    border: 1px solid;
+    border-collapse: collapse;
 }
 
 th, td {
     border: 1px solid;
-    border-collapse: collapse;
+
+}
+
+th.right, td.right {
+    text-align: right;
 }
 
 input:focus {
@@ -36,7 +40,7 @@ footer {
  /* margin-top: auto; */
   
     position: absolute;
-    scroll-margin: auto;
+    scroll-margin: 50px;
 
 }
 
