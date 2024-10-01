@@ -3,6 +3,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     width: 500px;
     margin: auto;
+    /*
+    display: flex;
+    flex-direction: column;
+    */
 }
 
 nav {
@@ -10,10 +14,16 @@ nav {
     flex-direction: column;
 }
 
-table, th, td {
+/* table, th, td { */
+table {
     width: 100%;
-    border: 1px solid;
+    border: .5px solid;
     /* border-collapse: collapse; */
+}
+
+th, td {
+    border: 1px solid;
+    border-collapse: collapse;
 }
 
 input:focus {
@@ -21,8 +31,13 @@ input:focus {
 }
 
 footer {
-    position: fixed;
-    bottom: 300px;
+ /* position: fixed;
+    bottom: 100px;  */
+ /* margin-top: auto; */
+  
+    position: absolute;
+    scroll-margin: auto;
+
 }
 
 textarea {

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Functions using switch statement">
+    <title>Functions using switch statement</title>
+    <link rel="stylesheet" href="hw1.css">
+
+    <script src="hw3.js" async></script>
+
+</head>
+
+<body onload="popPrice()">
+<header>
+<h1>Homework 3 - Functions Part 2</h1>
+
+</header>
+
+<section>
+<!--
+<h4>Using funciton, getElementById and innerHTML to take four item
+    quanties from form inputs, calculate and display the sales total 
+    amounts and weekly earning below the form in a table.</h4>
+-->
+<br><br>
+<!-- <form name="scoresForm" onsubmit="calcGrades(); return false"> -->
+<form name="salesForm">
+    <label for="seller">Seller's Name:</label>
+    <input type="text" id="seller" name="seller" size="30">
+    <p>For each item type the quantity sold by the seller below:</p>
+    <p><label for="item1">Item 1:</label>
+    <input type="number" id="item1" name="item1" size="10"></p>
+    <p><label for="item2">Item 2:</label>
+    <input type="number" id="item2" name="item2" size="10"></p>
+    <p><label for="item3">Item 3:</label>
+    <input type="number" id="item3" name="item3" size="10"></p>
+    <p><label for="item4">Item 4:</label>
+    <input type="number" id="item4" name="item4" size="10"></p>
+<br>
+
+<input type="button" onclick="calcSales()" value="SUBMIT">
+<input type="reset" value="CLEAR FORM" onclick="location.reload()">
+
+<br>
+<div id="errMsg"></div>
+<br><br>
+
+</form>
+
+<br><br>
+
+<table id="salesTable">
+    <caption style="display: none;">Sales Table</caption>
+    <thead>
+    <tr>
+        <th style="width: 10%;">Item #</th>
+        <th style="width: 10%;">Price</th>
+        <th style="width: 40%;">Qty Sold</th>
+        <th style="width: 40%;">Total $</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td></td>
+        <td align="right"></td>
+        <td align="right"></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td></td>
+        <td align="right"></td>
+        <td align="right"></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td></td>
+        <td align="right"></td>
+        <td align="right"></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td></td>
+        <td align="right"></td>
+        <td align="right"></td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="3"><strong>Total Amount Sold</strong></td>
+        <td id="totalAmount" align="right"></td>
+    </tr>
+    <tr>
+        <td colspan="3"><strong>Total Weekely Earnings</strong></td>
+        <td id="totalEarning" align="right"></td>
+    </tr>
+    </tfoot>
+
+</table>
+</section>
+
+<footer>
+<nav>
+    <br><br><br><a href="hw3.html">Back to Homework 3 main page</a>
+</nav>
+</footer>
+
+</body>
+</html>
