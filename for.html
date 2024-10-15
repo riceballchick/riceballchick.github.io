@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="For looping statement">
+    <title>For looping statement</title>
+    <link rel="stylesheet" href="hw1.css">
+
+    <!-- <script src="hw4.js" async></script> -->
+
+</head>
+
+<body>
+<header>
+<h1>Homework 4 - Looping Statements<br>Part 1</h1>
+</header>
+
+<main>
+
+<br>
+<h3>Using for loop to calcuate the product and sum of every fourth
+    integer from 5 to 25 inclusive, then displays the results with 
+    the correct punctuation using toLocaleString().</h3>
+
+<script>
+
+    var sum = 0, product = 1;
+    var sumMsg = "The result of ";
+    var productMsg = "The result of ";
+
+    for (var i = 5; i <= 25; i += 4)
+    { 
+        sum += i;
+        product *= i; 
+        if (i == 5) {
+            sumMsg +=  i ;
+            productMsg +=  i ;
+        } else {
+            sumMsg += " + " + i ;
+            productMsg += " * " + i ;
+        }
+    }
+
+    sumMsg += " is " + sum.toLocaleString() + "\n";
+    productMsg += " is " + product.toLocaleString() + "\n"; 
+
+    document.write("<pre>");
+    document.writeln(sumMsg); 
+    document.writeln(productMsg);
+    document.write("</pre>");
+
+</script>
+
+<br>
+<h3>Using while loop to calcuate the product and sum of every third 
+    integer from 3 to 18 inclusive, then displays the results with 
+    the correct punctuation using toLocaleString(). </h3>
+
+<script>
+
+    i = 3;
+    sum = 0, product = 1;
+    sumMsg = "The result of ";
+    productMsg = "The result of ";
+
+    while (i <= 18) {
+        sum += i;
+        product *= i;
+
+        if (i == 3) {
+            sumMsg +=  i ;
+            productMsg +=  i ;
+        } else {
+            sumMsg += " + " + i ;
+            productMsg += " * " + i ;
+        }
+        
+        i += 3;
+    } // end of while
+
+    sumMsg += " is " + sum.toLocaleString() + "\n";
+    productMsg += " is " + product.toLocaleString() + "\n"; 
+
+    document.write("<pre>");
+    document.writeln(sumMsg); 
+    document.writeln(productMsg);
+    document.write("</pre>");
+
+</script>
+
+</main>
+
+<footer>
+    <nav>
+        <br><br><br><a href="hw4.html">Back to Homework 4 main page</a>
+    </nav>
+</footer>
+
+</body>
+</html>
