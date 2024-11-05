@@ -75,10 +75,17 @@ document.write("<br>");
 
 } // function validate()
 
-function goNewPage(thisForm) {
+function goNewPage(thisForm, id) {
+    
+    let selectedIndex = thisForm.destList.selectedIndex; 
+    let new_page = thisForm.destList.options[selectedIndex].value;
 
-    let new_page = thisForm.destList.options[thisForm.destList.selectedIndex].value;
-    window.open(new_page);
+    if ((selectedIndex == 0) && (id == "destList1")) {
+        return;
+    } else {
+        window.open(new_page);
+    }
+
 
 } //function goNewPage()
 

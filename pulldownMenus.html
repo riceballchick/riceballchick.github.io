@@ -31,8 +31,8 @@
 
 
 <form>
-<h3>Choose your destination (using onChange event handler)</h3>
-<select name="destList" onChange="goNewPage(this.form);">
+<h3><label for="destList1">Choose your destination (using onChange event handler)</label></h3>
+<select name="destList" id="destList1" onChange="goNewPage(this.form, 'destList1');">
 <option>Choose Destination:</option>
 <option value="http://www.yahoo.com/">Yahoo</option>
 <option value="http://www.w3.org/">W3C</option>
@@ -43,13 +43,13 @@
 <br><br>
     
 <form>
-<h3>Choose your destination (using onClick event handler)</h3>
-<select name="destList">
+<h3><label for="destList2">Choose your destination (using onClick event handler)</label></h3>
+<select name="destList" id="destList2">
 <option value="http://www.yahoo.com/">Yahoo</option>
 <option value="http://www.w3.org/">W3C</option>
 <option value="http://www.mozilla.org/">Mozilla</option>
 </select>
-<input type="button" value="Go" onClick="goNewPage(this.form);">
+<input type="button" value="Go" onClick="goNewPage(this.form, 'destList2');">
 </form>
 
 
