@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Form element validations using array">
+    <title>Form element valications using array</title>
+    <link rel="stylesheet" href="hw1.css">
+
+    <script src="hw5.js" async></script>
+
+
+</head>
+
+<body>
+<header>
+<h1>Homework 5 - Arrays Part 1</h1>
+
+</header>
+
+<section>
+<!--
+<h4>Using form objects and arrays to validate text input field, 
+    radio button selection, checkbox options and pulldown menu
+    selection. Display error messages or succesfully submitted
+    message. </h4>
+-->
+<br><br>
+<!-- <form name="scoresForm" onsubmit="calcGrades(); return false"> -->
+<form name="myForm">
+<p><label for="name"><strong>Enter Your Full Name:</strong></label>
+<input type="text" id="name" name="name" size="30"><br></p>
+
+<p><strong>Select your age group:</strong><br><br>
+<input type="radio" name="ages" id="age1" value="Younger than 21"><label for="age1">Younger than 21</label><br>
+<input type="radio" name="ages" id="age2" value="Between 21 and 50"><label for="age2">Between 21 and 50</label><br>
+<input type="radio" name="ages" id="age3" value="Older than 50"><label for="age3">Older than 50</label>
+</p>
+
+<p><strong>Select the browsers you have used:</strong><br><br>
+<input type="checkbox" name="browsers" id="browser1" value="Firefox"><label for="browser1">Firefox</label><br>
+<input type="checkbox" name="browsers" id="browser2" value="Edge"><label for="browser2">Edge</label><br>
+<input type="checkbox" name="browsers" id="browser3" value="Chrome"><label for="browser3">Chrome</label><br>
+<input type="checkbox" name="browsers" id="browser4" value="Safari"><label for="browser4">Safari</label><br>
+</p>
+
+<p><strong>Choose the type of movies you prefer:</strong><br><br>
+<select name="movie" id="movie">
+<option>Choose type of movie:</option>
+<option value="Action">Action</option>
+<option value="Comedy">Comedy</option>
+<option value="Drama">Drama</option>
+<option value="Documentary">Documentary</option>
+<option value="Science Fiction">Science Fiction</option>
+</select>
+</p>
+
+<br>
+
+<input type="button" onclick="validate()" value="SUBMIT">
+<input type="reset" value="CLEAR FORM" onclick="location.reload()">
+
+<br><br><br>
+
+</form>
+
+<h3><u>Results below (after form submission):</u></h3>
+<div id="successMsg"></div>
+<div id="errMsg"></div>
+
+</section>
+
+<footer>
+<nav>
+    <br><br><br><a href="hw5.html">Back to Homework 5 main page</a>
+</nav>
+</footer>
+
+</body>
+</html>

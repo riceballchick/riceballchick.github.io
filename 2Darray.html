@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="State table search using Multidimensional Array">
+    <title>State table search using Multidimensional Array</title>
+    <link rel="stylesheet" href="hw1.css">
+
+    <script src="hw5.js" async></script>
+
+
+</head>
+
+<body>
+<header>
+<h1>Homework 5 - Arrays Part 3</h1>
+
+</header>
+
+<section>
+<!--
+<h4>Take a "state" name or abbreviation from user input and search 
+    against a two-dimensional array to display census info for that
+    state. </h4>
+-->
+<br><br>
+
+<form name="myForm">
+<p><label for="name"><h4>Enter the Full Name or Abbreviation of<br>
+                     the state you want more info:</h4></label>
+<input type="text" id="name" name="name" size="30"><br></p>
+
+<input type="button" onclick="getCensus()" value="STATE INFO">
+<input type="reset" value="CLEAR FORM" onclick="location.reload()">
+</form>
+
+<h3><u>Results below (after form submission):</u></h3>
+<div id="successMsg"></div>
+<div id="errMsg"></div>
+
+</section>
+
+<footer>
+<nav>
+    <br><br><br><a href="hw5.html">Back to Homework 5 main page</a>
+</nav>
+</footer>
+
+</body>
+</html>

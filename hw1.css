@@ -90,3 +90,12 @@ textarea {
     background-color: lightgreen ;
     color: black;
 }
+
+#successMsg {
+    font-size: large;
+    color: green;
+}
+#errMsg {
+    font-size: large;
+    color: red;
+}

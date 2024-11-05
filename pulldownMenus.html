@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Form dropdown menu validation using array">
+    <title>Form dropdown menu valication using array</title>
+    <link rel="stylesheet" href="hw1.css">
+
+    <script src="hw5.js" async></script>
+
+
+</head>
+
+<body>
+<header>
+<h1>Homework 5 - Arrays Part 2</h1>
+
+</header>
+
+<section>
+<!--
+<h4>Create two pulldown menus, each with 3 URL desinations: 
+    - the 1st menu uses an onchange event handler to navigate to a page;
+    - the 2nd menu uses an onclick event handler.  
+    The selected website opens in a new tab/window. 
+</h4>
+-->
+<br><br>
+
+
+
+<form>
+<h3>Choose your destination (using onChange event handler)</h3>
+<select name="destList" onChange="goNewPage(this.form);">
+<option>Choose Destination:</option>
+<option value="http://www.yahoo.com/">Yahoo</option>
+<option value="http://www.w3.org/">W3C</option>
+<option value="http://www.mozilla.org/">Mozilla</option>
+</select>
+</form>
+    
+<br><br>
+    
+<form>
+<h3>Choose your destination (using onClick event handler)</h3>
+<select name="destList">
+<option value="http://www.yahoo.com/">Yahoo</option>
+<option value="http://www.w3.org/">W3C</option>
+<option value="http://www.mozilla.org/">Mozilla</option>
+</select>
+<input type="button" value="Go" onClick="goNewPage(this.form);">
+</form>
+
+
+
+</section>
+
+<footer>
+<nav>
+    <br><br><br><a href="hw5.html">Back to Homework 5 main page</a>
+</nav>
+</footer>
+
+</body>
+</html>
