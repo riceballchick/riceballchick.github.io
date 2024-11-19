@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="Math Objects - Rounding">
+<title>Math Objects - Rounding</title>
+<link rel="stylesheet" href="hw1.css">
+
+<script src="hw6.js" async></script>
+
+</head>
+
+<body onload="document.getElementById('number').focus();">
+<header>
+<h1>Homework 6 - Objects Part I</h1>
+<h2>Math Rounting</h2>
+</header>
+
+<section>
+   
+      <form name="myForm">
+         <label for="number">Enter a number with at least 4 decimal positions</label>: <br>
+         <input type="number" id="number"><br><br>
+         <input type="button" value="ROUND" onclick="roundNumber()">
+         <input type="reset" value="CLEAR FORM" onClick="location.reload()"><br><br><br>
+
+         <h3><u>Results below (after form submission):</u></h3>
+         <div id="successMsg"></div>
+         <div id="errMsg"></div>
+
+      </form>
+	  
+</section>
+
+<footer>
+   <nav>
+       <br><br><br><a href="hw6.html">Back to Homework 6 main page</a>
+   </nav>
+</footer>
+
+</body>
+</html>

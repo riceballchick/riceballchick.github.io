@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="Character Search">
+<title>Character Search</title>
+<link rel="stylesheet" href="hw1.css">
+
+<script src="hw6.js" async></script>
+
+</head>
+
+<body>
+<header>
+<h1>Homework 6 - Objects Part II</h1>
+<h2>Character Search</h2>
+</header>
+
+<section>
+    <form name="myForm">
+        <label for="urInput">Enter the text you want to be searched in:</label><br>
+        <textarea name="urInput" id="urInput" cols="50" rows="10" required></textarea><br><br>
+        <label for="char">Enter a single character to search for:</label><br>
+        <input name="char" id="char" type="text" maxlength="1" required>
+        <input type="button" value="SEARCH" onclick="charSearch()">
+        <input type="reset" value="CLEAR FORM" onClick="location.reload()">
+
+        <br><br>
+        
+        <h3><u>Results below (after form submission):</u></h3>
+        <div id="successMsg"></div>
+        <div id="errMsg"></div>
+
+     </form>
+
+</section>
+
+<footer>
+    <nav>
+        <br><br><br><a href="hw6.html">Back to Homework 6 main page</a>
+    </nav>
+</footer>
+     
+</body>
+</html>

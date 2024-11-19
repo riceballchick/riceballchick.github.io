@@ -55,7 +55,7 @@ tr:nth-child(even){
     background-color: aliceblue;
 }
 
-input:focus {
+input:focus, textarea:focus {
     background-color: yellow;
 }
 
