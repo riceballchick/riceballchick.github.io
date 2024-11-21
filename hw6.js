@@ -78,7 +78,7 @@ function charSearch() {
 
         // open window on the upper left of the screen
 
-        let errWindow = window.open("", "new_window", "top=220,left=50,width=300,height=100");
+        let errWindow = window.open("", "new_window", "top=50,left=50,width=300,height=100");
  
         errWindow.focus();
 
