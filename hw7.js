@@ -30,11 +30,18 @@ function dropdownFontSize() {
 
 function createCookies() {
 
-    let name = document.getElementById("name").value;
-    let username = document.getElementById("username").value;
+    let name = document.getElementById("name").value.trim();
+    let username = document.getElementById("username").value.trim();
+    let errMsg = ""; 
 
-    setCookie("name", name);
-    setCookie("username", username); 
+    if ((name) && (username)) {
+        setCookie("name", name);
+        setCookie("username", username); 
+    } else {
+        errMsg = "Both name and username are REQUIRED fields";
+    }
+
+    document.getElementById("errMsg").innerHTML = errMsg; 
 }
 
 function setCookie(cName, value) {
@@ -63,8 +70,9 @@ function getCookie(cName) {
 function checkCookie() {
     let name = getCookie("name");
     let username = getCookie("username");
+    document.getElementById("errMsg").innerHTML = "";
 
-    if (name) {
+    if ((name) && (username)) {
       console.log("name=" + name);
       console.log("username=" + username);
       document.getElementById("result").innerHTML = "Welcome back " + name + "!";

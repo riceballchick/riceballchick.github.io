@@ -23,13 +23,15 @@
 <div id="myform">
 <form>
 <label for="name">Type your name: </label>
-<input type="text" name="name" id="name"><br><br>
+<input type="text" name="name" id="name" required><br><br>
 <label for="username">Type your username: </label>
-<input type="text" name="username" id="username"><br><br>
+<input type="text" name="username" id="username" required><br><br>
 <input type="button" value="CREATE COOKIES" onclick="createCookies()">
-<input type="reset" value="CLEAR FORM">
+<input type="reset" value="CLEAR FORM" onclick="location.reload()">
 </form>
 </div>
+<br><br>
+<div id="errMsg"></div>
 
 </section>
 
