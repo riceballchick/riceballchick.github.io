@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="Document Object Model">
+<title>Document Objecct Model</title>
+<link rel="stylesheet" href="hw1.css">
+
+<script src="hw7.js" async></script>
+
+</head>
+
+<body id="body">
+<header>
+<h1>Homework 7 - Part 1</h1>
+<h2>Document Object Model</h2>
+</header>
+
+<main id="main">
+<br><br>
+<div id="fontStyleDiv">
+<div id="fontSizeDiv">
+<strong>Select the color of the background:</strong><br>
+<input type="radio" name="bcolor" id="bcolor1" onclick="radioStyle('yellow')">
+<label for="bcolor1">Light Yellow</label>
+<input type="radio" name="bcolor" id="bcolor2" onclick="radioStyle('green')">
+<label for="bcolor2">Light Green</label>
+<input type="radio" name="bcolor" id="bcolor3" onclick="radioStyle('blue')">
+<label for="bcolor3">Light Blue</label>
+<br><br>
+
+<strong>Select the font style(s):</strong><br>
+<input type="checkbox" name="fontStyles" id="font1" value="underline" onchange="checkboxStyle(this)">
+<label for="font1">Underline</label>
+<input type="checkbox" name="fontStyles" id="font2" value="bold" onchange="checkboxStyle(this)">
+<label for="font2">Bold</label>
+<input type="checkbox" name="fontStyles" id="font3" value="italic" onchange="checkboxStyle(this)">
+<label for="font3">Italic</label>
+<br><br>
+
+<strong><label for="fontSize">Select the font size:</label></strong><br>
+<select name="fontSize" id="fontSize" onchange="dropdownFontSize()">
+<option value="#">--Choose font size--</option>
+<option value="small">Small</option>                         
+<option value="medium">Medium</option>                        
+<option value="large">Large</option>       
+</select>
+</div>
+</div>
+<br><br>
+
+</main>
+
+<footer>
+    <nav>
+        <br><br><br><a href="hw7.html">Back to Homework 7 main page</a>
+    </nav>
+</footer>
+     
+</body>
+</html>

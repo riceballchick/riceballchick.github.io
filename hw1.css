@@ -91,6 +91,61 @@ textarea {
     color: black;
 }
 
+.yellow {
+    background-color: lightyellow;
+}
+
+.green {
+    background-color: lightgreen;
+}
+
+.blue {
+    background-color: lightblue;
+}
+
+.underline {
+    text-decoration-line: underline;
+}
+
+.underline_unset {
+    text-decoration-line:none;
+}
+
+.italic {
+    font-style: italic; 
+}
+
+.italic_unset {
+    font-style:normal; 
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.bold_unset {
+    font-weight:normal;
+}
+
+
+.fontNoStyle {
+    text-decoration-line: none;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.small {
+    font-size: 12px;
+}
+
+.medium {
+    font-size: 18px;
+}
+
+.large {
+    font-size: 22px;
+}
+
 #successMsg {
     font-size: large;
     color: green;
