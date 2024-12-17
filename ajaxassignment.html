@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+ 
+<html lang="en">
+
+<head> 
+<meta charset="utf-8">
+<meta name="description" content="AJAX Application">
+<title>AJAX Application</title>
+<link rel="stylesheet" href="hw1.css">
+
+<style>
+table,th,td {
+  border : 1px solid black;
+  border-collapse: collapse;
+}
+th,td {
+  padding: 5px;
+}
+</style>
+</head>
+
+
+<body>
+<header>
+<h1>Homework 8 - AJAX Application</h1>
+</header>
+
+<main>
+<button type="button" onclick="loadDoc()">Get CD collection</button>
+<br><br>
+<table id="demo"></table>
+
+<script>
+
+function loadDoc() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function() {
+    myFunction(this);
+  }
+  xhttp.open("GET", "cd_catalog.xml");
+  xhttp.send();
+} //loadDoc()
+
+function myFunction(xml) {
+  const xmlDoc = xml.responseXML;
+  const x = xmlDoc.getElementsByTagName("CD");
+  let table="<tr><th>Artist</th><th>Title</th></tr>";
+  for (let i = 0; i <x.length; i++) { 
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+} // myFunction()
+
+function fetchData() {
+
+  const pokemonName = document.getElementById("pokemonName").value.toLowerCase().trim();
+  let errMsg = ""; 
+
+  fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+    .then (response => {
+
+        if (!response.ok) {
+            throw new Error("Could not fetch resource!"); 
+        }
+        return response.json();
+
+    })
+    .then (data => {
+
+        const pokemonSprite = data.sprites.front_default;
+        const imgElement = document.getElementById("pokemonSprite");
+        imgElement.src = pokemonSprite;
+        imgElement.style.display = "block";
+        document.getElementById("errMsg").innerHTML = "";
+    })
+    .catch (error => {
+
+        errMsg = error; 
+        document.getElementById("errMsg").innerHTML = errMsg; 
+        document.getElementById("pokemonSprite").style.display = "none";
+
+    }); 
+} // fechData()
+
+
+
+</script>
+
+<h2>Explanation of AJAX</h2>
+<ol>
+  <li>An instance of the XMLHttpRequest object is instantiated (xhttp) for asynchronously exchanging 
+the XML data between the client and the server beind the scenes.  This allows
+parts of the web page to be updated without reloading the whole page.</li>
+
+  <li>A callback function ( xhttp.onload = function () {...} ) is then defined 
+to exeute function myFunction(this) when the AJAX response is ready, with this 
+XMLHttpRequest object as the input parameter of myFunction().</li>
+
+  <li>XMLHttpRequest methods of open() and send() are then used to send the "GET" request 
+to READ "cd_catalog.xml" data from the server.</li>
+
+  <li>In function myFunction(),  responseXML property of XMLHttpRequest object returns
+the response data as XML data.  HTML DOM method getElementByTagName("CD") and a for loop
+are used to parse the XML data and display returned Artist and Title in a table.</li>
+</ol>
+
+<h2>REST API</h2>
+<h3><a href="https://pokeapi.co">Poké API</a></h3>
+<p>
+Poké API is one of the most popular Pokéman APIs, offering a comprehensive database of 
+Pokéman information readily accessible through a RESTful interface in one plae. It enables 
+developers to retrieve and integrate information like Pokéman stats, abilites, types, 
+sprites (Pokéan images) and everything about the Pokéman main game series into their games, 
+appliations and websites, from a central repository programmatically without having to 
+create and mamange Pokéman data themselves. 
+</p>
+<p>
+Poké API is free and open to use.  No authentication is required to access his consumption-only 
+API, and all resources are fully open and available.  Only the HTTP GET method is available on 
+resources. 
+</p>
+<p>
+Poké API website not only offers <a href="https://pokeapi.co/docs/v2">concise and well-structured API documentation</a>, 
+<a href="https://pokeapi.co/">its homepage</a> also provides a helpful hint and a "Try it now!" 
+box with simple examples to get you started quickly.  The example direct link results show the 
+response in JSON format. 
+</p>
+
+<br>
+<h2>Extra credit:</h2>
+<strong>An example of using Poké API to fetch Pokéman sprite/image:<br>
+(e.g. pikachu, typhlosion, bulbasaur)</strong><br>
+<input type="text" id="pokemonName" placeholder="Enter Pokemon name">
+<button onclick="fetchData()">Fetch Pokémon Sprite</button><br>
+<img alt="Pokemon Sprite" id="pokemonSprite" style="display: none">
+<div id="errMsg"></div>
+</main>
+
+<br>
+
+<footer>
+  <nav>
+    <a href="hw1.html">Back to Main page</a>
+  </nav>
+</footer>
+</body>
+</html>
