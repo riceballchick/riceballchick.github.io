@@ -109,7 +109,7 @@ are used to parse the XML data and display returned Artist and Title in a table.
 </ol>
 
 <h2>REST API</h2>
-<h3><a href="https://pokeapi.co">Poké API</a></h3>
+<h3><a href="https://pokeapi.co" rel="noopener noreferrer" target="_blank">Poké API</a></h3>
 <p>
 Poké API is one of the most popular Pokéman APIs, offering a comprehensive database of 
 Pokéman information readily accessible through a RESTful interface in one plae. It enables 
@@ -119,23 +119,24 @@ appliations and websites, from a central repository programmatically without hav
 create and mamange Pokéman data themselves. 
 </p>
 <p>
-Poké API is free and open to use.  No authentication is required to access his consumption-only 
+Poké API is free and open to use.  No authentication is required to access this consumption-only 
 API, and all resources are fully open and available.  Only the HTTP GET method is available on 
 resources. 
 </p>
 <p>
-Poké API website not only offers <a href="https://pokeapi.co/docs/v2">concise and well-structured API documentation</a>, 
-<a href="https://pokeapi.co/">its homepage</a> also provides a helpful hint and a "Try it now!" 
-box with simple examples to get you started quickly.  The example direct link results show the 
-response in JSON format. 
+Poké API website not only offers <a href="https://pokeapi.co/docs/v2" rel="noopener noreferrer" target="_blank">
+concise and well-structured API documentation</a>, 
+<a href="https://pokeapi.co/" rel="noopener noreferrer" target="_blank">its homepage</a> 
+also provides a helpful hint and a "Try it now!" box with simple examples to get you started quickly.  
+The example direct link results show the response in JSON format. 
 </p>
 
 <h2>Extra credit:</h2>
 <strong>An example of using Poké API to fetch Pokéman sprite/image:<br>
 (e.g. pikachu, typhlosion, bulbasaur)</strong><br>
-<input type="text" id="pokemonName" placeholder="Enter Pokemon name">
+<input type="text" id="pokemonName" value="pikachu">
 <button onclick="fetchData()">Fetch Pokémon Sprite</button><br>
-<img src=" " alt="Pokemon Sprite" id="pokemonSprite" style="display: none">
+<img src="https://pokeapi.co/api/v2/pokemon/pikachu" alt="Pokemon Sprite" id="pokemonSprite" style="display: none">
 <div id="errMsg"></div>
 </main>
 
